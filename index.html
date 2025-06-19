@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-LIST</title>
+    <link rel="icon" href="assets/TODOLIST-ICON.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/light-theme.css" id="light-theme">
+    <link rel="stylesheet" href="styles/dark-theme.css" id="dark-theme" disabled>
+    <link rel="stylesheet" href="styles/retro-tint.css" id="retro-tint" disabled>
+</head>
+<body >
+    
+   <header>
+        <div class="d-t-1">
+
+            <div class="d-i-1">
+                <p>ToDo List</p>
+            </div>
+
+            <div class="d-i-2">
+                <div class="radio-container">
+                    <div class="radio-item">
+                        <input class="web-theme" type="radio" id="LIGHT" name="filter" value="LIGHT">
+                        <label for="LIGHT">LIGHT</label>
+                    </div>
+                    <div class="radio-item">
+                        <input class="web-theme" type="radio" id="RETRO-TINT" name="filter" value="RETRO-TINT">
+                        <label for="RETRO-TINT">RETRO-TINT</label>   
+                    </div>
+                    <div class="radio-item">
+                        <input class="web-theme" type="radio" id="DARK" name="filter" value="DARK">
+                        <label for="DARK">DARK</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+   </header>
+
+    <div class="section-2">
+
+
+
+        <div class="section-2-2">
+            <div class="card-TASK">
+
+                <div class="TASK-Heading">
+
+                    <div class="TH-1">
+                        <h1>TASKS</h1>
+                        <p id="current-date"></p>
+                    </div>
+
+                    <div class="TH-2">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn-custom Button-add" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            +
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" role="dialog" aria-modal="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title modal-title-custom ps-4" id="staticBackdropLabel">TASK</h1>
+                                        <button type="button" class="btn-close pe-5" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body modal-body-custom">
+                                        <input type="text" name="task" id="modal-input-task" class="modal-input-custom" aria-label="Task description">
+                                        <div class="modal-priority-custom" role="radiogroup" aria-labelledby="priority-label">
+                                            <div id="priority-label" class="visually-hidden">Select task priority</div>
+                                            <div class="form-check">
+                                                <input class="form-check-input c-P-LOW" type="radio" name="exampleRadios" id="c-P-LOW" value="option1" checked>
+                                                <label class="form-check-label c-P-LOW" for="c-P-LOW">
+                                                    LOW
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input c-P-MEDIUM" type="radio" name="exampleRadios" id="c-P-MEDIUM" value="option2">
+                                                <label class="form-check-label c-P-MEDIUM" for="c-P-MEDIUM">
+                                                    MEDIUM
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input c-P-HIGH" type="radio" name="exampleRadios" id="c-P-HIGH" value="option2">
+                                                <label class="form-check-label c-P-HIGH" for="c-P-HIGH">
+                                                    HIGH
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn-custom-add" data-bs-dismiss="modal" aria-label="Add task">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="TASK-All">
+
+                    <!-- TASKS -->
+                    
+
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-main-div">
+
+            <div class="footer-con-div">
+                <a href="https://github.com/Mattz-337" target="_blank" class="text-center text-body-secondary footer-con-a">
+                <pre>©  MATTZ🧑‍💻</pre>
+                </a>
+                <p class="text-center " >@ =>19/06/2025</p>
+            </div>
+           
+
+    </div>
+
+
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="scripts/todo-1.js"></script>
+
+</html>
